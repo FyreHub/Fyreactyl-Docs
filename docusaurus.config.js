@@ -25,13 +25,17 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/FyreHub/Fyreactyl',
+          editUrl: 'https://github.com/FyreHub/Fyreactyl-Docs/edit/master/',
+          showLastUpdateAuthor: true,
+					showLastUpdateTime: true
         },
-        blog: {
+        blog: false,
+        /*{
           showReadingTime: true,
           blogSidebarCount: 'ALL',
           editUrl: 'https://github.com/FyreHub/Fyreactyl',
         },
+        */
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
