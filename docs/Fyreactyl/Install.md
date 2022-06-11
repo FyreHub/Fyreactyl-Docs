@@ -52,7 +52,7 @@ node -v
 Now to install Fyreactyl:
 
 ```bash
-git clone https://github.com/FyreHub/Fyreactyl.git
+git clone https://github.com/FyreSoftware/Fyreactyl.git
 cd Fyreactyl
 sudo npm install
 ```
@@ -84,7 +84,7 @@ node -v
 Now to install Fyreactyl and its dependencies:
 
 ```bat
-git clone https://github.com/FyreHub/Fyreactyl.git
+git clone https://github.com/FyreSoftware/Fyreactyl.git
 cd Fyreactyl
 npm install
 ```
@@ -132,7 +132,7 @@ node -v
 Now to install Fyreactyl:
 
 ```bash
-git clone https://github.com/FyreHub/Fyreactyl.git
+git clone https://github.com/FyreSoftware/Fyreactyl.git
 cd Fyreactyl
 sudo yum install
 ```
