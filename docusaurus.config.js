@@ -14,8 +14,8 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Fyre Software', // Usually your GitHub org/user name.
-  projectName: 'Fyreactyl', // Usually your repo name.
+  organizationName: 'FyreSoftware', // Usually your GitHub org/user name.
+  projectName: 'Docs', // Usually your repo name.
 
   presets: [
     [
@@ -25,14 +25,8 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/FyreSoftware/Docs/edit/master/',
           showLastUpdateAuthor: true,
 					showLastUpdateTime: true
-        },
-        blog: {
-          showReadingTime: true,
-          blogSidebarCount: 'ALL',
-          editUrl: 'https://github.com/FyreHub/Fyreactyl',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -61,49 +55,48 @@ const config = {
             label: 'Docs',
           },
           {
-            href: 'https://github.com/FyreHub',
+            href: 'https://github.com/FyreSoftware',
             label: 'GitHub',
             position: 'right',
           },
-          { to: 'blog', label: 'Blog', position: 'left' },
         ],
       },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Projects',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Fyreactyl',
+                to: '/docs/fyreactyl/introduction',
               },
+              {
+                label: 'Knowledgebase',
+                to: '/docs/knowledgebase/introduction'
+              }
             ],
           },
           {
             title: 'Community',
             items: [
               {
+                label: 'GitHub',
+                href: 'https://github.com/FyreSoftware'
+              },
+              {
                 label: 'Discord',
                 href: 'https://discord.gg/3EfyVECKkg',
               },
             ],
           },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/FyreHub',
-              },
-            ],
-          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Fyre Software, Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} FyreNodes LTD. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['php', 'markup']
       },
     }),
 };
