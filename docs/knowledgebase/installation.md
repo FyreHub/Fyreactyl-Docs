@@ -4,6 +4,11 @@ sidebar_position: 2
 
 # Installation
 
+:::caution Alpha Addon
+This addon is currently in Alpha. Please report any bugs in the Fyre Software Discord.
+Do not use on production software.
+:::
+
 ## [General](#general)
 Copy all the files from the provided directories.
 
