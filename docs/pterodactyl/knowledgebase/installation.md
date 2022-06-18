@@ -10,7 +10,17 @@ Do not use on production software.
 :::
 
 ## [General](#general)
-Copy all the files from the provided directories.
+
+### Put the panel into maintenance mode:
+
+```bash
+cd /var/www/pterodactyl
+php artisan down
+```
+
+### Download the latest release:
+Download the latest release from [GitHub](https://github.com/FyreSoftware/Knowledgebase/releases/latest/download/Fyre-Knowledgebase.zip).
+Extract and copy all the files to /var/www/pterodactyl.
 
 ## [Modifications](#modifications)
 
@@ -168,7 +178,7 @@ knowledgebase: boolean;
 
 <br/>
 
-### /resources/scripts/NavigationBar.tsx
+### /resources/scripts/components/NavigationBar.tsx
 
 <br/>
 
@@ -192,7 +202,7 @@ Insert the following above `{rootAdmin &&`:
 
 <br/>
 
-### /resources/scripts/App.tsx
+### /resources/scripts/components/App.tsx
 
 <br/>
 
@@ -266,13 +276,15 @@ yarn install
 
 <br/>
 
-### Building Panel
+### Building & Migrating
 
 <br/>
 
 ```bash
+php artisan migrate --force
 yarn run build:production
 php artisan optimize:clear
+php artisan up
 ```
 
 
