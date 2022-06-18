@@ -73,7 +73,7 @@ const config = {
               },
               {
                 label: 'Knowledgebase',
-                to: '/docs/knowledgebase/introduction'
+                to: '/docs/pterodactyl/knowledgebase/introduction'
               }
             ],
           },
