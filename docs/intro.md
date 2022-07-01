@@ -10,7 +10,7 @@ Our [Github](https://github.com/FyreHub).
 ## Current Projects
 
 - [Fyreactyl-v1](/docs/Fyreactyl/introduction)
-- [Knowledgebase](/docs/pterodactyl/knowledgebase/introductionn)
+- [Knowledgebase](/docs/pterodactyl/knowledgebase/introduction)
 
 ## Powered by
 
