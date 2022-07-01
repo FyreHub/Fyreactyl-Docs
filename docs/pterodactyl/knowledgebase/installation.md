@@ -58,7 +58,7 @@ Insert the following below `use Pterodactyl\Services\Helpers\AssetHashService`:
 use Pterodactyl\Contracts\Repository\KnowledgebaseRepositoryInterface;
 ```
 
-Insert the following below `private AssetHashService $assetHashService`:
+Insert the following below `private $assetHashService`:
 
 ```php
 public KnowledgebaseRepositoryInterface $knowledgebase;
@@ -151,21 +151,6 @@ Route::group(['prefix' => '/knowledgebase'], function () {
 
 <br/>
 
-### /tailwind.config.js
-
-<br/>
-
-Insert the following above `borderColor: theme => ({`:
-
-```js
-width: {
-    '3/10': '30%', 
-    '73/100': '73%'
-},
-```
-
-<br/>
-
 ### /resources/scripts/state/settings.ts
 
 <br/>
@@ -194,9 +179,11 @@ Insert the following above `{rootAdmin &&`:
 
 ```tsx
 {knowledgebase &&
-    <NavLink to={'/knowledgebase'}>
-	    <FontAwesomeIcon icon={faBook}/>
-    </NavLink>
+	<Tooltip placement={'bottom'} content={'Knowledgebase'}>
+        <NavLink to={'/knowledgebase'}>
+            <FontAwesomeIcon icon={faBook}/>
+        </NavLink>
+    </Tooltip>
 }
 ```
 
@@ -206,19 +193,21 @@ Insert the following above `{rootAdmin &&`:
 
 <br/>
 
-Insert the following below `import AuthenticationRouter from '@/routers/AuthenticationRouter'`:
+Insert the following below `const AuthenticationRouter = lazy(() => import(/* webpackChunkName: "auth" */ '@/routers/AuthenticationRouter'))`:
 
 ```ts
-import KnowledgebaseRouter from '@/routers/KnowledgebaseRouter';
+const KnowledgebaseRouter = lazy(() => import(/* webpackChunkName: "knowledgebase" */ '@/routers/KnowledgebaseRouter'));
 ```
 
 Insert the following above `<AuthenticatedRoute path={'/'}>`
 
 ```tsx
 {SiteConfiguration?.knowledgebase &&
-    <AuthenticatedRoute path={'/knowledgebase'}>
-        <KnowledgebaseRouter/>
-    </AuthenticatedRoute>
+	<AuthenticatedRoute path={'/knowledgebase'}>
+		<Spinner.Suspense>
+			<KnowledgebaseRouter/>
+		</Spinner.Suspense>
+	</AuthenticatedRoute>
 }
 ```
 
@@ -285,6 +274,14 @@ php artisan migrate --force
 yarn run build:production
 php artisan optimize:clear
 php artisan up
+```
+
+<br/>
+
+### Permissions
+
+```bash
+chown -R www-data:www-data /var/www/pterodactyl/*
 ```
 
 
