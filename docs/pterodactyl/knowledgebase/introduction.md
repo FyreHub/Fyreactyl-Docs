@@ -16,5 +16,6 @@ Supported versions of Pterodactyl:
 
 | Knowledgebase | Pterodactyl |
 | ------------- | ----------- |
-| v0.1.0        | >= v1.8.0   |
+| v0.1.0        | = v1.8.x    |
+| v0.2.0        | >= v1.9.x   |
 
