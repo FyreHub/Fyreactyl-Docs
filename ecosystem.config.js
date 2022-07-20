@@ -1,9 +1,9 @@
 module.exports = {
     apps: [
         {
-            name: 'Docs - FyreSoftware',
+            name: 'Docs - FyreSoft',
             script: 'yarn',
-            args: 'run serve -- --build --port 3000 --host 0.0.0.0',
+            args: 'run serve --build --port 5000 --host docs.fyresoftware.com',
             interpreter: 'bash'
         }
     ]
