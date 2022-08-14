@@ -3,7 +3,7 @@ module.exports = {
         {
             name: 'Docs - FyreSoft',
             script: 'yarn',
-            args: 'run serve --build --port 5000 --host 0.0.0.0',
+            args: 'run serve --build --port 5010 --host 0.0.0.0',
             interpreter: 'bash'
         }
     ]
